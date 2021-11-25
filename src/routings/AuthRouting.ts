@@ -5,9 +5,9 @@ import { Router } from "express";
 const AuthRouter: Router = Router()
 const Controller = new AuthController()
 
-AuthRouter.get("/login",Controller.register)
-AuthRouter.post("/register")
-AuthRouter.post("/activate/:code")
-AuthRouter.post("/logout")
+AuthRouter.post("/login")
+AuthRouter.post("/register",Controller.register)
+AuthRouter.get("/activate/:code")
+AuthRouter.get("/logout")
 
 export default AuthRouter
